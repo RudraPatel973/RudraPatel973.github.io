@@ -196,3 +196,22 @@ if(location.hash){
  const target=document.getElementById(decodeURIComponent(location.hash.slice(1)));
  if(target)requestAnimationFrame(()=>{target.scrollIntoView({behavior:'instant',block:'start'});cleanSectionUrl();});
 }
+
+// Browser email options also work when no local mail application is configured.
+const emailDialog=document.querySelector('#email-dialog');
+if(emailDialog){
+ document.querySelectorAll('a[href^="mailto:"]').forEach(link=>{
+  if(emailDialog.contains(link))return;
+  link.addEventListener('click',event=>{
+   if(event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+   event.preventDefault();emailDialog.showModal();
+  });
+ });
+ emailDialog.querySelector('[aria-label="Close email options"]').addEventListener('click',()=>emailDialog.close());
+ emailDialog.addEventListener('click',event=>{if(event.target===emailDialog){const r=emailDialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)emailDialog.close();}});
+ emailDialog.querySelector('#copy-email').addEventListener('click',async()=>{
+  const status=emailDialog.querySelector('#email-status');
+  try{await navigator.clipboard.writeText('rp3403@columbia.edu');status.textContent='Email address copied.';}
+  catch{status.textContent='Copy this address: rp3403@columbia.edu';}
+ });
+}
