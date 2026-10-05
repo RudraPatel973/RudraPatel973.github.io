@@ -176,3 +176,23 @@ if ('IntersectionObserver' in window) {
   markerObserver.observe(marker);
  });
 }
+
+// Scroll to page sections without adding fragments to the address bar.
+const scrollToSection = target => {
+ target.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
+};
+const cleanSectionUrl = () => {
+ if(location.hash)history.replaceState(history.state,'',location.pathname+location.search);
+};
+document.addEventListener('click',event=>{
+ const link=event.target.closest('a[href^="#"]');
+ if(!link||event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey||link.hasAttribute('download')||link.target==='_blank')return;
+ const target=document.getElementById(link.getAttribute('href').slice(1));
+ if(!target)return;
+ event.preventDefault();scrollToSection(target);cleanSectionUrl();
+});
+// Existing shared section links still land on their section, then show a clean URL.
+if(location.hash){
+ const target=document.getElementById(decodeURIComponent(location.hash.slice(1)));
+ if(target)requestAnimationFrame(()=>{target.scrollIntoView({behavior:'instant',block:'start'});cleanSectionUrl();});
+}
