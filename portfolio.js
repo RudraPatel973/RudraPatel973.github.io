@@ -200,7 +200,7 @@ if(location.hash){
 // Browser email options also work when no local mail application is configured.
 const emailDialog=document.querySelector('#email-dialog');
 if(emailDialog){
- document.querySelectorAll('a[href^="mailto:"]').forEach(link=>{
+ document.querySelectorAll('[data-email], a[href^="mailto:"]').forEach(link=>{
   if(emailDialog.contains(link))return;
   link.addEventListener('click',event=>{
    if(event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
