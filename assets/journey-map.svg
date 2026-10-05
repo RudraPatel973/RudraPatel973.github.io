@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 570" role="img" aria-labelledby="title desc">
+<title id="title">An illustrated map of Rudra's journey</title><desc id="desc">A dotted path connects Brampton, Brockville, Ottawa and New York, with cartoon trees, mountains, the CN Tower, Ottawa Parliament, and the Statue of Liberty. Illustrative, not to scale.</desc>
+<defs><pattern id="paper" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="3" cy="5" r="1" fill="#836f4e" opacity=".1"/></pattern><g id="tree" stroke="#344b3c" stroke-width="3" stroke-linejoin="round"><path d="M0 16v18"/><path d="M0-16-15 10h10L-20 22h40L5 10h10Z" fill="#7aba78"/></g><g id="mountain" stroke="#64725c" stroke-width="3" stroke-linejoin="round"><path d="m0 25 25-45 25 45Z" fill="#b5c89e"/><path d="m15-2 10-18 10 18-10-6Z" fill="#fff8e8"/></g><g id="stop"><circle r="13" fill="#ffe05c" stroke="#423c30" stroke-width="4"/><circle r="4" fill="#423c30"/></g><g id="cloud" fill="#fff8e8" stroke="#b1a58b" stroke-width="2"><path d="M0 15c-9-11 5-22 15-17 0-19 29-21 34-4 20-8 32 12 20 21Z"/></g></defs>
+<rect width="720" height="570" fill="#f3e6c7"/><rect width="720" height="570" fill="url(#paper)"/>
+<path d="M0 303Q78 278 111 317T185 320Q231 313 267 337L246 357Q189 379 153 358T69 342L0 365" fill="#9cd9de" stroke="#527f84" stroke-width="3"/>
+<path d="M47 367q60-30 124-1l31 25-26 21-69 8-63-19Z" fill="#9cd9de" stroke="#527f84" stroke-width="3"/>
+<path d="M720 377Q666 396 642 450L603 570H720" fill="#9cd9de" stroke="#527f84" stroke-width="3"/>
+<path d="M385 214q-28 26-45 52t-63 48" fill="none" stroke="#88bdc6" stroke-width="9" stroke-linecap="round"/>
+<path d="M0 397q118 40 189-15t153-46q81 6 172-14t206-8" fill="none" stroke="#b9a583" stroke-width="2" stroke-dasharray="8 9"/>
+<g font-family="monospace" font-size="15" fill="#8b7754" letter-spacing="3"><text x="232" y="110">ONTARIO</text><text x="450" y="356">NEW YORK</text><text x="47" y="338" font-size="10" letter-spacing="1">LAKE ONTARIO</text></g>
+<use href="#cloud" x="72" y="77"/><use href="#cloud" x="566" y="83"/><use href="#mountain" x="440" y="158"/><use href="#mountain" x="488" y="178"/><use href="#mountain" x="457" y="418"/>
+<g><use href="#tree" x="75" y="203"/><use href="#tree" x="111" y="220"/><use href="#tree" x="251" y="182"/><use href="#tree" x="280" y="199"/><use href="#tree" x="578" y="280"/><use href="#tree" x="611" y="300"/><use href="#tree" x="286" y="437"/><use href="#tree" x="313" y="453"/><use href="#tree" x="145" y="483"/></g>
+<path d="M164 285C210 276 260 233 342 261S380 208 400 190C451 240 405 339 484 395S526 449 557 475" fill="none" stroke="#fff8e8" stroke-width="10" stroke-linecap="round"/>
+<path d="M164 285C210 276 260 233 342 261S380 208 400 190C451 240 405 339 484 395S526 449 557 475" fill="none" stroke="#c06d55" stroke-width="4" stroke-dasharray="5 11" stroke-linecap="round"/>
+<g><use href="#stop" x="164" y="285"/><use href="#stop" x="342" y="261"/><use href="#stop" x="400" y="190"/><use href="#stop" x="557" y="475"/></g>
+<g font-family="monospace" font-weight="bold" font-size="17" fill="#423c30"><text x="164" y="319" text-anchor="middle">Brampton</text><text x="296" y="299">Brockville</text><text x="366" y="163">Ottawa</text><text x="530" y="519">New York</text></g>
+<!-- Stylized regional landmarks, independently drawn. -->
+<g stroke="#423c30" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+<!-- Parliament: Peace Tower, copper roof, clock and flanking wings. -->
+<g transform="translate(370 72)"><path d="M-10 70V41h27v29m22 0V41h27v29" fill="#d9b579"/><path d="m-14 41 17-12 18 12m14 0 17-12 18 12" fill="#78a08c"/><path d="M17 70V20h22v50" fill="#e9cf97"/><path d="m14 20 14-20 14 20Z" fill="#78a08c"/><path d="M28 0v-12m0 0h12l-12 7" fill="#c06d55"/><circle cx="28" cy="32" r="6" fill="#fff8e8"/><path d="M28 28v4l3 2M24 70V52h8v18m-37-12h5m7 0h5m32 0h5m7 0h5" fill="none"/></g>
+<!-- CN Tower: tapered concrete shaft and observation deck. -->
+<g transform="translate(154 224)"><path d="m-12 48 9-35h6l9 35Z" fill="#c5cbc1"/><path d="M-3 13V-7h6v20" fill="#c5cbc1"/><path d="m-12-7 3-9h18l3 9-3 6H-9Z" fill="#90bac3"/><path d="M0-16v-26m-7 31H7M-18 48h36" fill="none"/></g>
+<!-- Statue of Liberty: crown, raised torch, tablet and draped gown. -->
+<g transform="translate(557 388)"><path d="M-15 53h30v11h-30Zm-5 11h40v7h-40Z" fill="#d4c3a0"/><path d="m-12 53 4-36h15l8 36Z" fill="#80b6a1"/><path d="m-8 18-13-15-4-26 6-2 4 23 13 8" fill="#80b6a1"/><path d="m-26-25-2-7h12l-2 7Z" fill="#d9b579"/><path d="M-27-32q-5-7 2-15 1 7 5 6 6 5 2 9" fill="#ffe05c"/><circle cx="1" cy="8" r="7" fill="#80b6a1"/><path d="m-8 4-4-7 8 4-1-9 5 8 5-8-1 9 8-4-4 7" fill="#80b6a1"/><path d="m7 20 10 4-5 18-10-4Z" fill="#add0b8"/><path d="m-3 25-2 23m6-15 5 15" fill="none"/></g>
+</g>
+<g transform="translate(648 170)" fill="#423c30" font-family="monospace" text-anchor="middle"><text y="-25" font-size="16" font-weight="bold">N</text><path d="m0-15 8 25-8-5-8 5Z" fill="#c06d55" stroke="#423c30" stroke-width="2"/></g>
+<text x="27" y="546" font-family="monospace" font-size="11" fill="#8b7754">A LITTLE ADVENTURE, ONE CHAPTER AT A TIME</text>
+</svg>

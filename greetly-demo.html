@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Greet-ly Voice Demo</title><style>body{margin:0;background:#faf9f4;font:14px Arial,sans-serif;color:#19191b}#widget-loading{padding:30px;text-align:center}#widget-loading p{line-height:1.6}#widget-loading a{color:inherit}#retell-widget-root{max-width:100vw}</style><script id="retell-widget" src="https://dashboard.retellai.com/retell-widget-v2.js" type="module" data-voice-public-key="public_key_dfc9dd038fdaaea5a98f5" data-voice-agent-id="agent_b5c1ac8d57abb593d028750628" data-title="Talk to Greet-ly" data-logo-url="https://rudra-patel-portfolio-lemon.vercel.app/assets/brands/greetly-logo.png" data-theme-color="#19191b" data-component-color="#208db1" data-fab-text="Greet-ly voice demo" data-bot-name="Greet-ly" data-show-ai-popup="false" data-auto-open="true"></script></head><body><div id="widget-loading" role="status"><p>Loading your Greet-ly voice demo…</p><p>You’ll choose when to start the call.</p></div><script>const observer=new MutationObserver(()=>{if(document.querySelector('#retell-widget-root button')){document.querySelector('#widget-loading').hidden=true;observer.disconnect()}});observer.observe(document.body,{childList:true,subtree:true});setTimeout(()=>{const status=document.querySelector('#widget-loading');if(!status.hidden)status.innerHTML='<p>The voice demo could not load. Please refresh or try opening it directly.</p><a href="greetly-demo.html" target="_blank" rel="noopener">Open voice demo ↗</a>'},15000);</script><script>
+if(new URLSearchParams(location.search).has('inline')){
+ let started=false;
+ const timer=setInterval(()=>{
+  const host=document.querySelector('#retell-widget-root');if(!host)return;
+  document.documentElement.style.background='#132431';document.body.style.background='#132431';host.style.cssText='position:relative;width:100%;height:100%;';
+  const root=host.shadowRoot||host.firstElementChild?.shadowRoot;if(!root)return;
+  if(!root.querySelector('#inline-call-style')){
+   const style=document.createElement('style');style.id='inline-call-style';
+   style.textContent='[class*="window_"],[class*="container_1cx33"]{position:relative!important;bottom:auto!important;right:auto!important;left:auto!important;transform:none!important;width:100%!important;max-width:100%!important;box-shadow:none!important}[class*="fabBase"],[class*="closeButton"]{display:none!important}[class*="windowVoice"]{height:100%!important;max-height:none!important;padding:0!important;background:transparent!important;border:0!important;border-radius:0!important}[class*="innerShell"]{background:transparent!important;border-radius:0!important;overflow:visible!important}[class*="voicePanel"]{padding:12px!important;overflow:visible!important}[class*="voiceVisualizerFrame"]{width:90px!important;height:90px!important;min-height:90px!important;flex-shrink:0!important}[class*="brandTitle"],[class*="brandSubtitle"]{display:none!important}[class*="voiceTimer"]{color:#a8b0bf!important}[class*="voiceControls"]{flex-shrink:0!important;margin-top:24px!important}';root.append(style);
+  }
+  document.querySelector('#widget-loading').hidden=true;
+  const start=root.querySelector('button[class*="startCallButton"]');
+  if(start&&!started){started=true;start.click();}
+ },200);
+ setTimeout(()=>clearInterval(timer),20000);
+}
+</script></body></html>
