@@ -93,3 +93,6 @@ mark,.highlight{font-weight:700}
 
 /* One continuous phone screen: the embedded controls add no second frame. */
 .phone-demo #greetly-demo-content iframe{background:transparent!important;border:0!important;border-radius:0!important}.phone-demo.calling #greetly-demo-content{background:transparent;border:0;box-shadow:none}
+
+/* Native contact buttons match the themed link buttons. */
+button.button{background:var(--panel);color:var(--ink);font-family:inherit;cursor:pointer}
