@@ -2,7 +2,7 @@
 
 Personal portfolio featuring my experience, education, skills, Greet-ly, Volution, and honours thesis.
 
-Live website: https://rudra-patel-portfolio-lemon.vercel.app/
+Live website: https://rudrapatel973.github.io/
 
 ## Files
 
